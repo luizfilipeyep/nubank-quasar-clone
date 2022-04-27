@@ -1,4 +1,8 @@
 <template>
+    <div class="modal-warning">
+        <p>Esta é uma aplicação projetada para dispositivos móveis.</p>
+    </div>
+
     <q-page class="column justify-center items-center">
         <div class="row items-center justify-around q-mt-xl container-logo">
             <q-img src="../assets/logo-white.png" width="55px" />
@@ -92,6 +96,26 @@
 </script>
 
 <style lang="scss">
+    .modal-warning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        z-index: 1000;
+        background: #111;
+        color: white;
+        font-size: 25px;                
+    }
+
+    @media(max-width: 1000px) {
+        .modal-warning {
+            display: none;
+        }
+    }
+
     .container-logo {
         width: 40%;
 
